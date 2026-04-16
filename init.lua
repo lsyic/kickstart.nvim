@@ -604,7 +604,8 @@ require('lazy').setup({
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
-        verible = {},  -- Verilog/SystemVerilog LSP
+        -- verible = {},  -- Verilog/SystemVerilog LSP (禁用，改用 svlangserver)
+        svlangserver = {},  -- SystemVerilog LSP (更好的项目支持)
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
         --    https://github.com/pmizio/typescript-tools.nvim
