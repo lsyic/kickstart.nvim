@@ -762,7 +762,18 @@ require('lazy').setup({
         -- <c-k>: Toggle signature help
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
-        preset = 'enter',
+        preset = 'none',  -- 使用自定义配置
+        
+        -- 自定义按键映射
+        ['<Tab>'] = { 'select_next', 'fallback' },  -- Tab 选择下一个
+        ['<S-Tab>'] = { 'select_prev' },  -- Shift+Tab 选择上一个
+        ['<CR>'] = { 'accept' },  -- Enter 确认
+        ['<C-y>'] = { 'accept' },  -- Ctrl+y 确认
+        ['<C-n>'] = { 'select_next' },  -- Ctrl+n 下一个
+        ['<C-p>'] = { 'select_prev' },  -- Ctrl+p 上一个
+        ['<C-e>'] = { 'hide' },  -- Ctrl+e 关闭
+        ['<Up>'] = { 'select_prev' },  -- 上箭头
+        ['<Down>'] = { 'select_next' },  -- 下箭头
 
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
